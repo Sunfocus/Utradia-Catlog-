@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@drawable/blue_gradient"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom|start">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_userImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_user_menu"
+        android:layout_marginBottom="@dimen/margin_1x"
+        />
+    <TextView
+        android:id="@+id/txtFirstNametxtFirstNam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adam Zampa"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/itemLayout"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_userImage"
+        android:layout_width="@dimen/margin_6x"
+        android:layout_height="@dimen/margin_6x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_3x"
+        android:src="@drawable/ic_profile_setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:text="@string/created"
+        android:textColor="@color/black_27"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_userImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_created_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:textColor="@color/black_27"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_userImage"
+        app:layout_constraintTop_toBottomOf="@+id/created_at" />
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:text="@string/review"
+        android:textColor="@color/black_27"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_userImage"
+        app:layout_constraintTop_toBottomOf="@+id/txt_created_time" />
+
+    <TextView
+        android:id="@+id/txt_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:textStyle="bold"
+        android:textColor="@color/sky_blue"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_userImage"
+        app:layout_constraintTop_toBottomOf="@+id/review" />
+
+    <TextView
+        android:id="@+id/txt_review_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:textColor="@color/black_43"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_userImage"
+        app:layout_constraintTop_toBottomOf="@+id/txt_userName" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:text="@string/rating"
+        android:textColor="@color/black_27"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?attr/ratingBarStyleSmall"
+        android:theme="@style/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_created_time"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

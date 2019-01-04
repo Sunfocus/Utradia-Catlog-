@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/filter_open_shape_style" android:state_selected="true"
+        android:color="@android:color/black">
+
+    </item>
+    <item android:drawable="@drawable/filter_open_shape_style" android:state_pressed="true"
+        android:color="@android:color/black">
+
+
+    </item>
+    <item android:drawable="@drawable/filter_open_shape_style" android:state_activated="true"
+        android:color="@android:color/black">
+
+    </item>
+    <item android:drawable="@drawable/filter_open_shape_style" android:state_focused="true"
+        android:color="@android:color/black"/>
+
+
+    <item android:drawable="@drawable/filter_shape_selected"
+        android:color="@color/grey_A0">
+
+        
+    </item>
+
+</selector>

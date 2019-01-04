@@ -1,0 +1,190 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlToolbar"
+
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/imgShopBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ContentDescription" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/scrim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imgShopBanner"
+            app:layout_constraintTop_toTopOf="@+id/imgShopBanner">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:padding="@dimen/margin_1x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_mediumLarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgSearch"
+                app:layout_constraintStart_toEndOf="@+id/imgBack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72" />
+
+            <ImageView
+                android:id="@+id/imgCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:padding="@dimen/margin_1x"
+                app:layout_constraintVertical_bias="0.72"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_cart" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shop_badge_circle"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_very_small"
+                app:layout_constraintBottom_toTopOf="@+id/imgCart"
+                app:layout_constraintEnd_toStartOf="@+id/imgCart"
+                app:layout_constraintStart_toEndOf="@+id/imgCart"
+                app:layout_constraintTop_toTopOf="@+id/imgCart" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:padding="@dimen/margin_1x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgCart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72"
+                app:srcCompat="@drawable/ic_find" />
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="@dimen/margin_1x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.72"
+                app:layout_constraintLeft_toLeftOf="@+id/imgCart"
+                app:layout_constraintStart_toEndOf="@+id/imgCart"
+                app:srcCompat="@drawable/ic_main" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/rlToolbar"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/shop_frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_above="@+id/llOptions"
+                 />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/llOptions"
+                android:layout_alignParentBottom="true"
+                android:background="@color/grey_fa"
+                android:layout_above="@+id/tabStore"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_store"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/imgWhatsApp"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_whatsapp_store"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_store"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/imgMore"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more_store"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabStore"
+                style="@style/MyTabLayoutSmallCase"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tab_back"
+                app:tabIndicatorColor="@color/text_purple"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                android:visibility="gone"
+                app:tabSelectedTextColor="@color/text_purple"
+                app:tabTextColor="@color/appTextLight" />
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

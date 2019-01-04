@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:src="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_top_bar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:contentInsetLeft="10dp"
+        app:contentInsetStart="10dp"
+        android:layout_margin="0dp"
+        app:contentInsetStartWithNavigation="10dp"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        src:targetApi="lollipop" />
+    <LinearLayout
+        android:id="@+id/llSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/ic_search_back">
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/white_rounded"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableStart="@drawable/ic_search"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical|start"
+            android:hint="@string/search_for_products"
+            android:textColorHint="@color/hint_color"
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_1x"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/text_medium"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductList"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llSearchView" />
+
+    <TextView
+        android:id="@+id/txtNoProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_products_found"
+        android:textColor="@color/hint_color"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/text_small" />
+
+
+</RelativeLayout>

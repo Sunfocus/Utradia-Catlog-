@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/gray_header"
+        android:gravity="center_vertical|start"
+        android:padding="@dimen/margin_2x"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        android:text="@string/your_personal_data"
+        android:textAllCaps="true"
+        android:textColor="@color/appTextColor_dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHeader"
+        android:layout_above="@+id/btnSaveChanges"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_3x"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFirstName"
+                style="@style/EditTextRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/first_name"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:paddingBottom="@dimen/margin_1x"
+                android:paddingTop="@dimen/margin_1x"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLastName"
+                style="@style/EditTextRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/last_name"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:paddingBottom="@dimen/margin_1x"
+                android:paddingTop="@dimen/margin_1x"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtFirstName" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
+                style="@style/EditTextRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_mail"
+                android:hint="@string/email"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="@dimen/margin_1x"
+                android:paddingTop="@dimen/margin_1x"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhone"
+                style="@style/EditTextRegistration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:paddingBottom="@dimen/margin_1x"
+                android:paddingTop="@dimen/margin_1x"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/EditTextRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:padding="@dimen/margin_1x"
+                android:text="@string/_233"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDob"
+                style="@style/EditTextRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_calender"
+                android:hint="@string/birthday"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="@dimen/margin_1x"
+                android:paddingTop="@dimen/margin_1x"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+
+
+
+
+            <RadioGroup
+                android:id="@+id/rdgSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDob">
+
+                <RadioButton
+                    android:id="@+id/chkMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:padding="@dimen/margin_1x"
+                    android:text="@string/male"
+                    android:textColor="@color/appTextColor"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toStartOf="@+id/chkFemale"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+                <RadioButton
+                    android:id="@+id/chkFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:padding="@dimen/margin_1x"
+                    android:text="@string/female"
+                    android:textColor="@color/appTextColor"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/chkMale"
+                    app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="27dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDob"
+                app:srcCompat="@drawable/ic_gender" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/grey_storke_gray_background"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:gravity="center"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/address"
+                android:textSize="@dimen/text_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/appTextColor_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgSex" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_gradient"
+        android:gravity="center"
+        android:text="@string/save_changes"
+        android:textSize="@dimen/text_medium"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
+
+

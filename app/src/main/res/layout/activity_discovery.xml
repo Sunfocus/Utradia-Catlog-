@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".module.discovery.DiscoveryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_top_bar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:contentInsetLeft="10dp"
+        app:contentInsetStart="10dp"
+        android:layout_margin="0dp"
+        app:titleTextColor="@color/white"
+        app:contentInsetStartWithNavigation="10dp"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEvents"
+        android:paddingTop="@dimen/margin_1x"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtNoEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_events"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/grey_cd" />
+
+</LinearLayout>

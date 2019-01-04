@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".module.discovery.dealSignUp.DealSignUp">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/btnSaveChanges"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gudline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gudline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="24dp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_1x"
+                app:layout_constraintStart_toStartOf="@id/gudline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_gender" />
+
+            <TextView
+                android:id="@+id/genderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/gender"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+
+            <RadioGroup
+                android:id="@+id/rdgSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_1x"
+                app:layout_constraintStart_toStartOf="@+id/genderText"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1">
+
+                <RadioButton
+                    android:id="@+id/chkMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="@string/male"
+                    android:textColor="@color/appTextColor"
+                    android:textSize="@dimen/text_small"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    app:layout_constraintEnd_toStartOf="@+id/chkFemale"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+                <RadioButton
+                    android:id="@+id/chkFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="@string/female"
+                    android:textColor="@color/appTextColor"
+                    android:textSize="@dimen/text_small"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/chkMale"
+                    app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFullName"
+                style="@style/EditTextDiscover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintTop_toBottomOf="@+id/rdgSex"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start" />
+
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edAge"
+                style="@style/EditTextDiscover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintTop_toBottomOf="@+id/edtFullName"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start" />
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEmail"
+                style="@style/EditTextDiscover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintTop_toBottomOf="@+id/edAge"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start" />
+
+
+
+            <Spinner
+                android:id="@+id/spRegion"
+                style="@style/EditTextDiscover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star"
+                android:drawablePadding="@dimen/margin_2x"
+                android:drawableStart="@drawable/ic_user"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:padding="@dimen/margin_1x"
+                android:entries="@array/gender_array"
+
+                android:spinnerMode="dropdown"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintTop_toBottomOf="@+id/edEmail"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_gradient"
+        android:gravity="center"
+        android:text="@string/save_changes"
+        android:textSize="@dimen/text_medium"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

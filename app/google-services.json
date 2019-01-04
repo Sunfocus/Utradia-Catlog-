@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "125162290311",
+    "firebase_url": "https://utradia-v2.firebaseio.com",
+    "project_id": "utradia-v2",
+    "storage_bucket": "utradia-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125162290311:android:c4849430323a855c",
+        "android_client_info": {
+          "package_name": "com.utradia.catalogueappv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125162290311-pkpemut9rofufo7qu93nto3sib5r3rlk.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "125162290311-pkpemut9rofufo7qu93nto3sib5r3rlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe0mH0mtyX8oV-DOI7n7BU27NMJxalrfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

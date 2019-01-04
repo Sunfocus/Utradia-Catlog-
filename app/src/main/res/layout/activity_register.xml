@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+  >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imgShopLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtFirstName"
+            style="@style/EditTextRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:drawablePadding="@dimen/margin_2x"
+            android:maxLength="40"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableEnd="@drawable/ic_star"
+            android:hint="@string/first_name"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgShopLogo" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtLastName"
+            style="@style/EditTextRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:maxLength="40"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableEnd="@drawable/ic_star"
+            android:hint="@string/last_name"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFirstName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmail"
+            style="@style/EditTextRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableStart="@drawable/ic_mail"
+            android:hint="@string/email"
+            android:drawableEnd="@drawable/ic_star"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPhone"
+            style="@style/EditTextRegistration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_star"
+            android:drawablePadding="@dimen/margin_2x"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/EditTextRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/margin_1x"
+            android:text="@string/_233"
+            android:textColor="@color/appTextColor"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            style="@style/EditTextRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableStart="@drawable/ic_password"
+            android:ems="10"
+            android:drawableEnd="@drawable/ic_star"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtRetypePassword"
+            style="@style/EditTextRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableEnd="@drawable/ic_star"
+            android:drawableStart="@drawable/ic_password"
+            android:ems="10"
+            android:hint="@string/retype_password"
+            android:inputType="textPassword"
+            android:paddingBottom="@dimen/margin_1x"
+            android:paddingTop="@dimen/margin_1x"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/blue_btn_back"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center"
+            android:paddingEnd="@dimen/margin_3x"
+            android:paddingStart="@dimen/margin_5x"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdgSex" />
+
+        <RadioGroup
+            android:id="@+id/rdgSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword">
+
+            <RadioButton
+                android:id="@+id/chkMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/margin_1x"
+                android:text="@string/male"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toStartOf="@+id/chkFemale"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+            <RadioButton
+                android:id="@+id/chkFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/margin_1x"
+                android:text="@string/female"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/chkMale"
+                app:layout_constraintTop_toBottomOf="@+id/edtRetypePassword" />
+
+
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

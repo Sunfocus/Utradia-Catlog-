@@ -1,0 +1,218 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+      <!--  <item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="m">true</item>
+        <item name="android:windowEnterTransition" tools:targetApi="lollipop">@android:transition/fade</item>
+        <item name="android:windowExitTransition" tools:ignore="NewApi">@android:transition/fade</item>
+
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <!-- Splash Activity theme. -->
+    <style name="Theme.Splash" parent="Theme.MaterialComponents.Light.Bridge">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:scaleType">centerCrop</item>
+
+    </style>
+
+    <style name="DefaultActivity" parent="AppTheme">
+        <item name="android:windowEnterTransition" tools:ignore="NewApi">@transition/default_window_fade</item>
+        <item name="android:windowExitTransition" tools:ignore="NewApi">@transition/default_window_fade</item>
+    </style>
+
+    <style name="ActivityEnterTheme" parent="@android:style/Animation.Activity">>
+        <item name="android:activityOpenEnterAnimation">@anim/trans_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/trans_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/trans_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/trans_right_out</item>
+    </style>
+
+    <style name="cardViewRegistration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_10x</item>
+    </style>
+
+    <style name="LinearCardContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_15x</item>
+    </style>
+
+
+
+
+
+
+    <!--button style for app-->
+    <style name="buttonStyle1">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/margin_2x</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/blue_button</item>
+    </style>
+    <!--button style for app-->
+    <style name="buttonStyleWrap">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_1x</item>
+        <item name="android:layout_marginRight">@dimen/margin_1x</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/margin_3x</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/blue_button_back</item>
+    </style>
+    <!--button style for app-->
+    <style name="buttonStyleWithMargin">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_5x</item>
+        <item name="android:layout_marginRight">@dimen/margin_5x</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/margin_2x</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/blue_button</item>
+    </style>
+
+
+
+    <!--button style for app-->
+    <style name="NextbuttonStyle">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/margin_3x</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/blue_button</item>
+    </style>
+
+
+
+    <style name="MyTabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
+    </style>
+
+    <style name="MyTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="MyTabLayoutSmallCase" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabTextAppearanceSmallCaps</item>
+    </style>
+    <style name="MyTabTextAppearanceSmallCaps" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--EditText style for login an registration-->
+    <style name="EditTextRegistration">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_5x</item>
+        <item name="android:layout_marginRight">@dimen/margin_5x</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/margin_1x</item>
+        <item name="android:paddingBottom">@dimen/margin_1x</item>
+        <item name="android:textColor">@color/editTxtcolor</item>
+        <item name="android:textColorHint">@color/appTextColor</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/edit_shape_bottom_brdr</item>
+    </style>
+
+
+
+    <!--EditText style for login an registration-->
+    <style name="EditTextDiscover">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/margin_1x</item>
+        <item name="android:paddingBottom">@dimen/margin_1x</item>
+        <item name="android:textColor">@color/editTxtcolor</item>
+        <item name="android:textColorHint">@color/appTextColor</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:background">@drawable/edit_shape_bottom_brdr</item>
+    </style>
+
+
+    <!--EditText style for review-->
+    <style name="EditTextReview">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/editTxtcolor</item>
+        <item name="android:textColorHint">@color/appTextColor</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/edit_shape_bottom_brdr</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bartextCollapsed">
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/margin_3x</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+    <style name="bartextextended">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/text_xlarge</item>
+    </style>
+
+    <style name="ratingbar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray_c2</item>
+        <item name="colorControlActivated">@color/app_light_blue</item>
+    </style>
+
+
+    <!--Bottom Sheet-->
+
+    <style name="AppTheme.BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">true</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppTheme.BottomSheetStyle</item>
+    </style>
+
+
+
+    <!--bottom sheet layout-->
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/app_light_blue</item>
+    </style>
+
+
+
+
+
+
+
+</resources>

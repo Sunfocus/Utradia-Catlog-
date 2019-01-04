@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0264d3</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="color_notification">#e16c70</color>
+    <color name="flash_red">#d2232a</color>
+    <color name="eee">#eeeeee</color>
+    <color name="ccc">#cccccc</color>
+    <color name="gray_follow">#d0d2d4</color>
+    <color name="color_fefefe">#fefefe</color>
+
+    <color name="app_blue">#0373d3</color>
+    <color name="app_light_blue">#34aada</color>
+    <color name="gray_header">#f5f6f8</color>
+    <color name="gray_e5">#e5e5e5</color>
+    <color name="gray_e9">#f9f7f7</color>
+    <color name="gray_c2">#c2c2c2</color>
+    <color name="gray_product_item_sep">#FFD5D6D9</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#80000000</color>
+    <color name="tab_back">#fdfdfd</color>
+
+    <color name="text_purple">#2d2a8e</color>
+    <color name="checked_blue_state">#2d3091</color>
+    <color name="unchecked_grey_state">#bebfc1</color>
+    <color name="grey_cd">#cdcdcd</color>
+    <color name="grey_fa">#fafafa</color>
+    <color name="drawer_item_state">#f5f6f8</color>
+    <color name="cat_back">#eff0f5</color>
+    <color name="cat_icon_tint">#97989a</color>
+    <color name="view_color">#f6f6f6</color>
+    <color name="hint_color">#d3d3d5</color>
+    <color name="grey_icon_color">#d3d4d6</color>
+    <color name="grey_cb">#CBCBCB</color>
+    <color name="appTextColor">#5d5d5d</color>
+    <color name="appTextColor_b4">#b4b4b4</color>
+    <color name="appTextColor_dark">#181918</color>
+    <color name="black">#000000</color>
+    <color name="black_2e">#2e2e2e</color>
+    <color name="appTextLight">#999999</color>
+    <color name="editTxtcolor">#808080</color>
+    <color name="black_2c">#2C2E2D</color>
+    <color name="grey_A0">#A0A2A1</color>
+    <color name="black_35">#353736</color>
+    <color name="grey_AF">#AFB1B0</color>
+    <color name="grey_F9">#F9FBFA</color>
+    <color name="black_27">#272727</color>
+    <color name="black_43">#434343</color>
+    <color name="black_22">#222222</color>
+
+    <color name="light_green">#9abf7a</color>
+    <color name="blue">#2b2b99</color>
+    <color name="sky_blue">#03b1ee</color>
+    <color name="dark_yellow">#d49641</color>
+    <color name="dark_blue">#245178</color>
+    <color name="dark_red">#d04e58</color>
+    <color name="grey_f5">#F5F5F5</color>
+    <color name="grey_ec">#ECEEF5</color>
+
+    <color name="grey_shade">#e7e7e7</color>
+
+    <color name="black_50">#D9BBBBBB</color>
+    <color name="white_30">#BFffffff</color>
+
+
+    <color name="sky_green_30">#949abf7a</color>
+
+    <color name="dark_purple">#342F8D</color>
+
+</resources>

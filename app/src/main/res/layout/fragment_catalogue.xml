@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/white"
+android:animateLayoutChanges="true"
+android:layout_height="match_parent">
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:id="@+id/appBar"
+    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolbar"
+        android:background="@color/grey_fa">
+
+        <ImageView
+            android:id="@+id/imgShopLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_purple"
+            android:textSize="@dimen/text_mediumLarge"
+            app:layout_constraintBottom_toBottomOf="@+id/imgShopLogo"
+            app:layout_constraintStart_toEndOf="@+id/imgShopLogo"
+            app:layout_constraintTop_toTopOf="@+id/imgShopLogo" />
+
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/gray_follow"
+                android:padding="8dp"
+                android:text="@string/follow"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtUnFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/app_light_blue"
+                android:padding="8dp"
+                android:text="@string/unfollow"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                 />
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabCategories"
+        android:layout_width="match_parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:layout_height="40dp"
+        style="@style/MyTabLayoutSmallCase"
+        android:background="@color/tab_back"
+        app:tabIndicatorColor="@color/text_purple"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        android:visibility="visible"
+        app:tabSelectedTextColor="@color/text_purple"
+        app:tabTextColor="@color/appTextLight"/>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvClientProducts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/drawer_item_state"
+     />
+
+<TextView
+    android:id="@+id/txtNoProducts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:gravity="center"
+    android:textSize="@dimen/text_small"
+    android:textColor="@color/hint_color"
+    android:text="@string/no_products_found"
+     />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--  <item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="m">true</item>
+        <item name="android:windowEnterTransition" tools:targetApi="lollipop">
+            @android:transition/fade
+        </item>
+        <item name="android:windowExitTransition" tools:ignore="NewApi">@android:transition/fade
+        </item>
+
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

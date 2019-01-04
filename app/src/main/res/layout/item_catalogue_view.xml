@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLayout"
+    android:padding="@dimen/divider_height"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginTop="@dimen/margin_1x"
+    app:layout_goneMarginBottom="@dimen/margin_1x"
+    android:background="@drawable/shape_product_item">
+
+    <ImageView
+        android:id="@+id/imgCatalogue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_pager_height"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white_30"
+        android:paddingStart="@dimen/margin_1x"
+        android:paddingEnd="@dimen/margin_1x"
+        android:paddingTop="@dimen/divider_height"
+        android:paddingBottom="@dimen/divider_height"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCatalogue"
+        app:layout_constraintEnd_toEndOf="@+id/imgCatalogue"
+        app:layout_constraintStart_toStartOf="@+id/imgCatalogue">
+
+        <TextView
+            android:id="@+id/tv_categoryType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/appTextColor_dark"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_categoryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/appTextColor"
+            android:textSize="@dimen/text_very_small"/>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_very_small"
+            android:drawablePadding="@dimen/rounder_corner"
+            android:drawableStart="@drawable/ic_consult_date"
+            android:textColor="@color/appTextColor" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

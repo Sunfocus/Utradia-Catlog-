@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/grp1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_grey"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_notifications"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_notification_grey"
+            android:title="@string/notifications" />
+        <item
+            android:id="@+id/nav_follow"
+            android:icon="@drawable/ic_follow_grey"
+            
+            android:title="@string/follow_us_on_utradia" />
+        <item
+            android:id="@+id/nav_follow_items"
+            android:title="@string/follow_us_on_utradia"
+            app:actionLayout="@layout/view_follow_us"/>
+
+    </group>
+    <group android:id="@+id/grp2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_invite_grey"
+            android:title="@string/invite_friends" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_grey"
+            android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_user_grey"
+            android:title="@string/user_terms" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_customer_grey"
+            android:title="@string/customer_service" />
+    </group>
+</menu>

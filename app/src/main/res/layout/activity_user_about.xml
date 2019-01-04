@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".module.userAboutSection.UserAboutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_top_bar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:contentInsetLeft="10dp"
+        app:contentInsetStart="10dp"
+        android:layout_margin="0dp"
+        app:contentInsetStartWithNavigation="10dp"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        app:titleTextColor="@color/white"
+        android:contentInsetStart="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/drawer_item_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swNotifications"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:text="@string/notifications"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_1x"
+        android:textColor="@color/appTextColor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/txtExclusive"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:layout_height="wrap_content"
+        android:text="@string/exclusive_offers_and_updates"
+        android:textColor="@color/appTextColor_b4"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="@dimen/margin_2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swNotifications" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/view_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExclusive" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swOrders"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:text="@string/order_and_logistics"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_1x"
+        android:textColor="@color/appTextColor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/txtReceive"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_updates_on_your_orders"
+        android:textColor="@color/appTextColor_b4"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="@dimen/margin_2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swOrders" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/view_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtReceive" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swSystemMessages"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:text="@string/system_messages"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_1x"
+        android:textColor="@color/appTextColor"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/txtWishlist"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_wishlist_and_shopping_cart_updates"
+        android:textColor="@color/appTextColor_b4"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="@dimen/margin_2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swSystemMessages" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

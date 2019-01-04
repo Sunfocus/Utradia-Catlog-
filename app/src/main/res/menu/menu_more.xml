@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_catalogue"
+        android:icon="@drawable/ic_catalogue_more"
+        android:title="@string/catalogue" />
+    <item
+        android:id="@+id/menu_opnHour"
+        android:icon="@drawable/ic_opnhrs_more"
+        android:title="@string/open_hours" />
+
+
+    <item
+    android:id="@+id/menu_location"
+    android:icon="@drawable/ic_location_more"
+    android:title="@string/location" />
+
+    <item
+        android:id="@+id/menu_shpInfo"
+        android:icon="@drawable/ic_shop_info_more"
+        android:title="@string/shop_info" />
+
+
+    <item
+        android:id="@+id/menu_email"
+        android:icon="@drawable/ic_email_more"
+        android:title="@string/email" />
+
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/ic_share_more"
+        android:title="@string/share" />
+
+</menu>

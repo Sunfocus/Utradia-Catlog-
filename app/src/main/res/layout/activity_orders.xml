@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabOrderCategory"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        style="@style/MyTabLayoutSmallCase"
+        android:background="@color/tab_back"
+        app:tabIndicatorColor="@color/text_purple"
+        app:tabIndicatorHeight="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/text_purple"
+        app:tabTextColor="@color/appTextLight">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrderList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/drawer_item_state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabOrderCategory" />
+
+    <TextView
+        android:id="@+id/txtNoProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/no_products_found"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabOrderCategory" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

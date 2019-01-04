@@ -1,0 +1,271 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".catalogueappv2.module.filter.module.product_rating.Product_Rating_Frag">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnClear"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="@dimen/margin_1x"
+        android:text="@string/clear"
+        android:textColor="@color/dark_red"
+        android:textSize="@dimen/text_small"
+        app:backgroundTint="@color/gray_header"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Star Rating"
+        android:layout_gravity="center|start"
+        android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="68dp"
+        android:gravity="start"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:layout_marginLeft="6dp">
+
+            <com.utradia.catalogueappv2.VerticalSeekBar
+                android:id="@+id/seekbar_reverse"
+                android:layout_width="wrap_content"
+                android:layout_height="108dip"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/rateBarFive"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1" />
+
+            <RatingBar
+                android:id="@+id/rateBarFour"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:isIndicator="true"
+                android:numStars="4"
+                android:stepSize="0.1" />
+
+            <RatingBar
+                android:id="@+id/rateBarThree"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:isIndicator="true"
+                android:numStars="3"
+                android:stepSize="0.1" />
+
+            <RatingBar
+                android:id="@+id/rateBarTwo"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:isIndicator="true"
+                android:numStars="2"
+                android:stepSize="0.1" />
+
+            <RatingBar
+                android:id="@+id/rateBarOne"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:isIndicator="true"
+                android:numStars="1"
+                android:stepSize="0.1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/ratingGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_prod_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="4\u2605 &amp;above" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_prod_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="3\u2605 &amp;above" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_prod_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="2\u2605 &amp;above" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_prod_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="1\u2605 &amp;above" />
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="?android:attr/listDivider" />
+
+    </RadioGroup>
+
+</LinearLayout>
+

@@ -1,0 +1,273 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".catalogueappv2.module.filter.module.price.PriceFrag">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_clear"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="@dimen/margin_1x"
+        android:text="@string/clear"
+        android:textColor="@color/dark_red"
+        android:textSize="@dimen/text_small"
+        app:backgroundTint="@color/gray_header"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Min Price"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:text="₵"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:padding="4dp">
+
+                            <EditText
+                                android:id="@+id/etMinPrice"
+                                android:layout_width="fill_parent"
+                                android:layout_height="38dp"
+                                android:background="@drawable/seek_drawable"
+                                android:hint="0"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:maxLength="5"
+                                android:inputType="number" >
+
+                            </EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max Price"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:text="₵"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:padding="4dp">
+
+                            <EditText
+                                android:id="@+id/etMaxPrice"
+                                android:layout_width="fill_parent"
+                                android:layout_height="38dp"
+                                android:background="@drawable/seek_drawable"
+                                android:hint="0"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:textSize="14dp"
+                                android:maxLength="5"
+                                android:inputType="number" >
+
+                            </EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/seekbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <com.innovattic.rangeseekbar.RangeSeekBar
+                    android:id="@+id/rangeSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rsb_maxThumbDrawable="@drawable/thumb_circle"
+                    app:rsb_maxThumbOffsetHorizontal="2dp"
+                    app:rsb_minThumbDrawable="@drawable/thumb_circle"
+                    app:rsb_minThumbOffsetHorizontal="-2dp"
+                    app:rsb_trackColor="@color/app_light_blue"
+                    app:rsb_trackSelectedColor="@color/app_light_blue"
+                    app:rsb_trackSelectedThickness="8dp"
+                    app:rsb_trackThickness="4dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/priceGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_price_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="\u0024 0 - \u0024 500" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_price_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="\u0024 501 - \u0024 1500" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_price_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="\u0024 1501 - \u0024 5000" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/rb_price_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="@color/white"
+            android:button="@drawable/checkbox_selector"
+            android:padding="@dimen/margin_1x"
+            android:text="\u0024 5001 - \u0024 50000" />
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_3x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:background="?android:attr/listDivider" />
+
+
+    </RadioGroup>
+</LinearLayout>
+

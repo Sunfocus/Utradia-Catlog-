@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/filter_layout">
+
+    <TextView
+    android:id="@+id/tv_filter_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:padding="@dimen/margin_2x"
+    android:maxLines="1"
+    android:textSize="@dimen/text_very_small"
+    android:layout_alignParentStart="true"
+    android:textAllCaps="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_filter_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/margin_2x"
+        android:maxLines="1"
+        android:textSize="@dimen/text_very_small"
+        android:textAllCaps="true"
+        android:layout_alignEnd="@+id/tv_filter_name"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

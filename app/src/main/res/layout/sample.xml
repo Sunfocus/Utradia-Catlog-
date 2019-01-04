@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/gray_e9"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStoreName">
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margin_2x"
+                    app:srcCompat="@drawable/ic_call_black_24dp"
+                    tools:ignore="ContentDescription,NewApi" />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margin_2x"
+                    app:srcCompat="@drawable/ic_email_blue_24dp"
+                    tools:ignore="ContentDescription,NewApi" />
+
+                <ImageView
+                    android:id="@+id/imgWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margin_2x"
+                    app:srcCompat="@drawable/ic_public_blue_24dp"
+                    tools:ignore="ContentDescription,NewApi" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    tools:context=".MapLocationActivity" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgStoreImage"
+                android:layout_width="@dimen/rounded_dimnesion_dash_medium"
+                android:layout_height="@dimen/rounded_dimnesion_dash_medium"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textColor="@color/app_light_blue"
+                android:textSize="@dimen/text_mediumLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgStoreImage" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/text_very_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/txtOpeningHours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/gray_e9"
+                android:padding="@dimen/margin_1x"
+                android:layout_marginTop="8dp"
+                android:text="@string/opening_hours"
+                android:textColor="@color/app_light_blue"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtOpeningHours"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtMondayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tuesday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtTuesdayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wednesday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtWednesdayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thursday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtThursdayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtFridayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtSaturdayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sunday"
+                        android:textColor="@color/appTextLight"
+                        android:padding="@dimen/margin_1x"
+                        android:textSize="@dimen/text_small"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtSundayTime"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:padding="@dimen/margin_1x"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appTextLight"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

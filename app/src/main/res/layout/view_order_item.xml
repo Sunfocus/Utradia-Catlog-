@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/orderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_1x"
+    android:background="@color/color_fefefe">
+
+    <TextView
+        android:id="@+id/txtOrderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/gray_c2"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toStartOf="@+id/gdline_start_vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/order_id"
+        android:textColor="@color/gray_c2"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toStartOf="@+id/gdline_start_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderDate" />
+
+    <TextView
+        android:id="@+id/txtOrderAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/order_amount"
+        android:textColor="@color/gray_c2"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toStartOf="@+id/txtOrderStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtOrder"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderDate" />
+
+    <TextView
+        android:id="@+id/txtOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/status"
+        android:textColor="@color/gray_c2"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtOrderAmount"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderDate" />
+
+    <TextView
+        android:id="@+id/txtOrderId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="viewStart"
+        android:maxLines="2"
+        android:textColor="@color/black_2e"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintEnd_toStartOf="@+id/txtOrderAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gdline_start_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrder" />
+
+    <TextView
+        android:id="@+id/txtAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_2e"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toStartOf="@+id/txtOrderAmount"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderAmount" />
+
+    <TextView
+        android:id="@+id/txtStatusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/processing"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toStartOf="@+id/txtOrderStatus"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderStatus" />
+
+    <TextView
+        android:id="@+id/txtItemQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/items_qty"
+        android:textColor="@color/gray_c2"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toStartOf="@+id/gdline_start_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderId" />
+
+    <TextView
+        android:id="@+id/txtItemQtyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_2e"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toEndOf="@+id/txtItemQty"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderId" />
+
+    <TextView
+        android:id="@+id/txtViewOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/black_rounded_stroke"
+        android:text="@string/view_order"
+        android:textColor="@color/black_2e"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtItemQty" />
+
+    <TextView
+        android:id="@+id/txtCancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/black_rounded_stroke"
+        android:text="@string/cancel"
+        android:textColor="@color/black_2e"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/frameOrderConfirmation"
+        app:layout_constraintStart_toEndOf="@+id/txtViewOrder"
+        app:layout_constraintTop_toBottomOf="@+id/txtItemQty" />
+
+
+    <FrameLayout
+        android:id="@+id/frameOrderConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtItemQty">
+
+        <TextView
+            android:id="@+id/txtPayNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_rounded_stroke"
+            android:text="@string/pay_now"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_very_small" />
+
+        <TextView
+            android:id="@+id/txtReviewProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_rounded_review"
+            android:drawableBottom="@drawable/ic_review_star"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/write_a_review"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_very_small"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdline_start_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:layout_width="@dimen/margin_16x"
+        android:layout_height="@dimen/margin_16x"
+        android:id="@+id/imageView"
+        android:padding="2dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/product_image" />
+
+</LinearLayout>

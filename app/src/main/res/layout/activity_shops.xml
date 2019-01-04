@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:src="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/ic_top_bar"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:contentInsetLeft="10dp"
+            app:contentInsetStart="10dp"
+            android:layout_margin="0dp"
+            app:contentInsetStartWithNavigation="10dp"
+            android:contentInsetLeft="10dp"
+            android:contentInsetRight="10dp"
+            app:titleTextColor="@color/white"
+            android:contentInsetStart="10dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            src:targetApi="lollipop" />
+
+    <LinearLayout
+        android:id="@+id/llSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:background="@drawable/ic_search_back">
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/white_rounded"
+            android:drawablePadding="@dimen/margin_2x"
+            android:drawableStart="@drawable/ic_search"
+            android:ems="10"
+            android:gravity="center_vertical|start"
+            android:hint="@string/search_for_shops"
+            android:textColorHint="@color/hint_color"
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_1x"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/text_medium"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSponsor"
+        android:padding="16dp"
+
+        android:text="@string/sponsors"
+        android:layout_below="@id/llSearchView"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/text_purple"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSponsor"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNoShopsFound"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="@string/no_shops_found"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/appTextLight"
+        />
+</RelativeLayout>
+
+
+
+
+
+
